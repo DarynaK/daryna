@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Rosarivo" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <title>Daryna Klymenko</title>
+</head>
+<body>
+    <nav>
+        <div class="burger">
+            <img src="img/menu.png"/>
+        </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>   
+    </nav>
+   <div id="home" class="parallax-header">
+       <h1>Hello, I'm Daryna</h1>
+   </div>
+       <div class="container">
+           <div id="about" class="section-one">
+               <img src="img/myPhoto.jpg" alt="myPhoto" class="myPhoto">
+               <div class="text">
+                   <h3>About me</h3>
+                   <p>Hello, I'm Daryna Klymenko,
+                   </br> a seacher for the Trainee Front - end developer position.
+                   </br> I graduated from the SoftServe academy 
+                   </br>and I can create personable and functional webpages. 
+                   </br> Also it doesn't matter how 
+                   </br> you would want to view created by me webpages, 
+                   </br>adaptive and responsive layout 
+                   </br>is going to look awesome on any type of screen.</p>
+               </div>
+            </div>
+       </div>
+    <div id="skills" class="parallax-img">
+       <h2>Skills</h2>
+    </div>
+       <div class="container">
+           <div class="section-two">
+                <div class="skills-gallery">
+                    <div class="row">
+                        <img src="img/html-5.png" alt="html-5"/>
+                        <img src="img/css-3.png" alt="css-3"/>
+                        <img src="img/js.png" alt="js"/>
+                        <img src="img/angular.png" alt="angular"/>
+                    </div>
+                    <div class="row">
+                        <img src="img/jquery.png" alt="jquery"/>
+                        <img src="img/boostrap.png" alt="boostrap"/>
+                        <img src="img/github.png" alt="github"/>
+                        <img src="img/logo-ajax.png" alt="ajax"/>
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3/SASS</li>
+                        <li>JavaScript</li>
+                        <li>Jquery</li>
+                        <li>AngularJS</li>
+                        <li>Bootstrap</li>
+                        <li>Git/Github</li>
+                        <li>Ajax/Json</li>
+                    </ul>
+                </div>
+                <h3>Plus:</h3>
+                    <ul>
+                        <li>Adaptive and responsive layout.</li>
+                    </ul>
+            </div>
+        </div>
+    <div id="contacts" class="parallax-img">
+       <h2>Contacts</h2>
+    </div>
+        <div class="container">
+            <div id="contacts" class="section-three" ng-app="">
+                <h3>Leave me a message</h3>
+                <form id="cForm" class="form" name="contactForm" action="https://formspree.io/dara.klymenko@gmail.com" method="POST">
+                    <input type="text" name="name" id="name" placeholder="Your name" ng-model="contact.name" ng-required="true"/>
+                        <div ng-show="contactForm.name.$touched && contactForm.name.$invalid">
+                            <span class="validWarning">Enter your name, please</span>
+                        </div>
+                    <input type="email" name="email" id="email" placeholder="Your email" ng-model="contact.email" ng-required="true"/>
+                        <div ng-show="contactForm.email.$touched && contactForm.email.$invalid">
+                            <span class="validWarning">Enter valid email, please</span>
+                        </div>
+                    <textarea name="message" id="textarea" placeholder="Your message" rows="10"></textarea>
+                    <button type="button" id="send"><img src="img/paper-plane.png" alt="paper-plane"/>Send a message</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal close">
+                <div class="modal-box">
+                    <p class="modal-text">Thank you for your message</p>
+                    <span class="close closer">x</span>
+                </div>
+            </div>
+        </div>
+    <div class="parallax-img-footer">
+        <div class="contact-list">
+            <ul class="list">
+                <li><img src="img/phone.png" alt="phone"/> +3(050)81 90 298</li>
+                <li><img src="img/envelope.png" alt="email"/>dara.klymenko@gmail.com</li>
+            </ul>
+            <ul class="list">
+                <li><img src="img/facebook-logo.png" alt="facebook"/><a href="https://www.facebook.com/profile.php?id=100008308021038" target="_blank">Daryna Klymenko</a></li>
+                <li><img src="img/skype.png" alt="skype"/>klymenko.daryna</li>
+            </ul>
+        </div>
+    </div>
+   <script src="js/nav.js"></script>
+   <script src="js/form.js"></script>
+   <script src="js/burger.js"></script>
+   <script src="js/smoothscroll.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
